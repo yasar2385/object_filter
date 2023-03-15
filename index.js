@@ -97,5 +97,14 @@ var roles_orders = [
   },
 ];
 var re = roles_orders.filter((obj) => obj.role == AU_KEY);
-
 console.log(re);
+
+roles_orders.forEach((obj) => {
+  Object.entries(obj).forEach(([key, value]) => {
+    //console.log(`${key} ${value}`);
+    if (key == 'status' && value != ACTIVE) {
+      console.log(value)
+    }
+  });
+  console.log('-------------------');
+});
